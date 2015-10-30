@@ -9,7 +9,7 @@
     <div class="filter-area">
 
       Filter beakers by category
-
+      <br>
       <select ng-model="categoryFilter" class="filter">
         <option value="All" selected="selected">All</option>
         <option ng-repeat="cat in categories" value="{{cat.name}}">{{cat.name}}</option>
@@ -74,7 +74,7 @@
     <div class="beaker" ng-repeat="beaker in beakers" ng-show="filterByCategory(beaker) && filterBySearch(beaker)">
       <img class="thumb" src="img/themb.jpg" />
       <div class="info">
-        <h3>{{beaker.title}}</h3>
+        <h2>{{beaker.title}}</h2>
         <p>{{beaker.description}}</p>
         <div class="categories">
           <div ng-repeat="category in beaker.categories" class="category" style="background: #4ab19d">{{category}}</div>
@@ -88,10 +88,6 @@
       </div>
     </div>
 
-  </div>
-
-  <div ng-show="" class="view-iframe">
-    <iframe src=""></iframe>
   </div>
 
 </div>
