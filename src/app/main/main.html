@@ -10,12 +10,9 @@
 
       Filter beakers by category
       <br>
-      <select ng-model="filter" class="filter">
+      <select ng-model="categoryFilter" class="filter">
         <option value="All" selected="selected">All</option>
-        <option value="UI">UI</option>
-        <option value="Forms">Forms</option>
-        <option value="Buttons">Buttons</option>
-        <option value="Scrollers">Buttons</option>
+        <option ng-repeat="cat in categories" value="{{cat.name}}">{{cat.name}}</option>
       </select>
 
     </div>
@@ -74,14 +71,13 @@
 
   <div class="board scrollable">
 
-    <div class="beaker" ng-repeat="beaker in beakers">
+    <div class="beaker" ng-repeat="beaker in beakers" ng-show="filterByCategory(beaker) && filterBySearch(beaker)">
       <img class="thumb" src="img/themb.jpg" />
       <div class="info">
         <h2>{{beaker.title}}</h2>
-        <p>beaker info beaker info beaker info beaker info beaker info beaker info beaker info</p>
+        <p>{{beaker.description}}</p>
         <div class="categories">
-          <div class="category" style="background: #4ab19d ">UI Kit</div>
-          <div class="category" style="background: #eec857 ">Button</div>
+          <div ng-repeat="category in beaker.categories" class="category" style="background: #4ab19d">{{category}}</div>
         </div>
         </div>
       <div ng-show="!isAdded(beaker)" class="add-btn" ng-click="addOrRemoveBeaker(beaker)">
