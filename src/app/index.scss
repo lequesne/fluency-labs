@@ -20,7 +20,7 @@ $columnPadding: 20px;
 body {
 	background: #222;
 	color: #eee;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'sofia-pro', ;
 	font-weight: 200;
 }
 
@@ -86,6 +86,8 @@ textarea {
 	width: $sideBarWidth;
 	border-right: 1px solid white;
 	text-align: center;
+	font-size: 35px;
+	font-weight: bold;
 }
 
 .main {
@@ -121,6 +123,60 @@ textarea {
 	border-radius: 2px;
 	color: #222;
 	text-align: center;
+}
+
+.board {
+	padding: $columnPadding;
+}
+
+.beaker {
+ background: #333;
+ border-radius: 4px;
+ margin: 20px;
+ overflow: hidden;
+ width: 33.3333%;
+ display: inline-block;
+
+ .thumb {
+   height: 250px;
+   width: 100%;
+ }
+
+ .info {
+   padding: 20px;
+
+   h2 {
+     font-weight: 700;
+     margin-bottom: .5em;
+   }
+
+   .category {
+     display: inline-block;
+     border-radius: 180px;
+     padding: 8px 24px;
+     font-weight: 700;
+     margin-top: 1em;
+     margin-right: .5em;
+   }
+ }
+
+ .add-btn {
+   background: #44a8df ;
+   font-size: 1.4em;
+   font-weight: 700;
+   padding: 20px;
+   text-align: center;
+   width: 100%;
+ }
+
+ .remove-btn {
+   background: #ea5499 ;
+   font-size: 1.4em;
+   font-weight: 700;
+   padding: 20px;
+   text-align: center;
+   width: 100%;
+ }
 
 }
 

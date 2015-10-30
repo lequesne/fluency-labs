@@ -62,5 +62,18 @@
 
     }
 
+    $scope.isAdded = function(beaker){
+
+      var beakerIndex = $.inArray(beaker, $scope.newCollection.beakers);
+
+      if ( beakerIndex > -1 ) {
+        return true;
+
+      } else {
+        return false;
+      }
+
+    }
+
   }
 })();

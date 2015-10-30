@@ -1,7 +1,7 @@
 <header class="top-nav">
 
   <div class="logo-area">
-    Fluency Labs
+    <img src="assets/images/f-logo.png"/> Labs
   </div>
 
   <div class="navbar">
@@ -50,6 +50,14 @@
           You have no beakers added to this collection. Select beakers to add by checking the ones you wish to include
         </div>
 
+        <div ng-show="newCollection.beakers.length > 0">
+
+          <div ng-repeat="addedBeaker in newCollection.beakers">
+            {{addedBeaker.title}}
+          </div>
+
+        </div>
+
       </div>
 
     </div>
@@ -67,9 +75,21 @@
   <div class="board scrollable">
 
     <div class="beaker" ng-repeat="beaker in beakers">
-      <iframe src=""></iframe>
-      {{beaker.title}}
-      <div class="action-btn" ng-click="addOrRemoveBeaker(beaker)">Add to collection</div>
+      <img class="thumb" src="img/themb.jpg" />
+      <div class="info">
+        <h2>{{beaker.title}}</h2>
+        <p>beaker info beaker info beaker info beaker info beaker info beaker info beaker info</p>
+        <div class="categories">
+          <div class="category" style="background: #4ab19d ">UI Kit</div>
+          <div class="category" style="background: #eec857 ">Button</div>
+        </div>
+        </div>
+      <div ng-show="!isAdded(beaker)" class="add-btn" ng-click="addOrRemoveBeaker(beaker)">
+        Add to collection
+      </div>
+      <div ng-show="isAdded(beaker)" class="remove-btn" ng-click="addOrRemoveBeaker(beaker)">
+        Remove from collection
+      </div>
     </div>
 
   </div>
