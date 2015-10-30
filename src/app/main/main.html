@@ -1,0 +1,78 @@
+<header class="top-nav">
+
+  <div class="logo-area">
+    Fluency Labs
+  </div>
+
+  <div class="navbar">
+
+    <div class="filter-area">
+
+      Filter beakers by category
+      <br>
+      <select ng-model="filter" class="filter">
+        <option value="All" selected="selected">All</option>
+        <option value="UI">UI</option>
+        <option value="Forms">Forms</option>
+        <option value="Buttons">Buttons</option>
+        <option value="Scrollers">Buttons</option>
+      </select>
+
+    </div>
+
+    <input type="text" ng-model="quickSearch" class="quick-search" placeholder="Start typing to search"/>
+
+  </div>
+
+</header>
+
+<div class="main">
+
+  <div class="sidebar">
+
+    <div class="scrollable">
+
+      <h3>
+        Create a new collection
+      </h3>
+
+      <input type="text" ng-model="newCollection.name" placeholder="Collection Name" />
+
+      <textarea ng-model="newCollection.description" placeholder="Create a brief collection description, useful as a reference point for the client to remind them what they are looking at."></textarea>
+
+      <h4>
+        Added Pens
+      </h4>
+
+      <div class="added-pens">
+
+        <div ng-show="newCollection.beakers.length == 0 || !newCollection.beakers">
+          You have no beakers added to this collection. Select beakers to add by checking the ones you wish to include
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="sidebar-footer">
+
+      <a class="action-btn" ng-click="createCollection()">
+        Create Collection
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="board scrollable">
+
+    <div class="beaker" ng-repeat="beaker in beakers">
+      <iframe src=""></iframe>
+      {{beaker.title}}
+      <div class="action-btn" ng-click="addOrRemoveBeaker(beaker)">Add to collection</div>
+    </div>
+
+  </div>
+
+</div>
+

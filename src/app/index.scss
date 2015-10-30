@@ -1,0 +1,132 @@
+/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+ */
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+$topNavHeight: 80px;
+$sideBarWidth: 300px;
+$columnPadding: 20px;
+
+
+body {
+	background: #222;
+	color: #eee;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 200;
+}
+
+input, textarea, select {
+	width: 100%;
+	padding: 15px;
+	border: none;
+	margin: 10px 0;
+	background: rgba(white, 0.1);
+}
+
+textarea {
+	height: 200px;
+}
+
+.viewport {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: $topNavHeight 0 0 0;
+}
+
+.quick-search {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	max-width: 300px;
+	margin: 0;
+}
+
+.filter-area {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	max-width: 300px;
+}
+
+.filter {
+}
+
+.scrollable {
+	height: 100%;
+	overflow: auto;
+}
+
+.top-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: $topNavHeight;
+	padding-left: $sideBarWidth;
+	border-bottom: 1px solid white;
+}
+
+.logo-area {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: $sideBarWidth;
+	border-right: 1px solid white;
+	text-align: center;
+}
+
+.main {
+	position: relative;
+	height: 100%;
+	padding-left: $sideBarWidth;
+}
+
+.sidebar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: $sideBarWidth;
+	height: 100%;
+	border-right: 1px solid white;
+	padding: $columnPadding;
+	padding-bottom: 110px;
+}
+
+.sidebar-footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border-top: 1px solid white;
+	padding: $columnPadding;
+}
+
+.action-btn {
+	display: block;
+	padding: 15px;
+	background: lightblue;
+	border-radius: 2px;
+	color: #222;
+	text-align: center;
+
+}
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector

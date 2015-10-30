@@ -1,0 +1,24 @@
+[
+	{
+		id: 2,
+		title: 'Custom Scroll bar',
+		categories: [
+			'UI',
+			'Scrollers'
+		],
+		description: 'this is the description',
+		preview: 'image.png',
+		iframeURL: 'http://codepen.io/nicoptere/pen/QjrOYB/'
+	},
+	{
+		id: 2,
+		title: 'Drop down input',
+		categories: [
+			'inputs',
+			'forms'
+		],
+		description: 'this is the description',
+		preview: 'image.png',
+		iframeURL: 'http://codepen.io/nicoptere/pen/QjrOYB/'
+	}
+]
