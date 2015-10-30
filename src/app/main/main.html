@@ -9,10 +9,17 @@
     <div class="filter-area">
 
       Filter beakers by category
+<<<<<<< HEAD
 
       <select ng-model="categoryFilter" class="filter">
+=======
+      <select ng-model="filter" class="filter">
+>>>>>>> origin/master
         <option value="All" selected="selected">All</option>
-        <option ng-repeat="cat in categories" value="{{cat.name}}">{{cat.name}}</option>
+        <option value="UI">UI</option>
+        <option value="Forms">Forms</option>
+        <option value="Buttons">Buttons</option>
+        <option value="Scrollers">Scrollers</option>
       </select>
 
     </div>
@@ -29,16 +36,16 @@
 
     <div class="scrollable">
 
-      <h3>
+      <h4>
         Create a new collection
-      </h3>
+      </h4>
 
       <input type="text" ng-model="newCollection.name" placeholder="Collection Name" />
 
       <textarea ng-model="newCollection.description" placeholder="Create a brief collection description, useful as a reference point for the client to remind them what they are looking at."></textarea>
 
       <h4>
-        Added Pens
+        Added Beakers
       </h4>
 
       <div class="added-pens">
@@ -71,13 +78,18 @@
 
   <div class="board scrollable">
 
-    <div class="beaker" ng-repeat="beaker in beakers" ng-show="filterByCategory(beaker) && filterBySearch(beaker)">
+    <div class="beaker" ng-repeat="beaker in beakers">
       <img class="thumb" src="img/themb.jpg" />
       <div class="info">
         <h3>{{beaker.title}}</h3>
+<<<<<<< HEAD
         <p>{{beaker.description}}</p>
+=======
+        <p>beaker info beaker info beaker info beaker info beaker info beaker info beaker info</p>
+>>>>>>> origin/master
         <div class="categories">
-          <div ng-repeat="category in beaker.categories" class="category" style="background: #4ab19d">{{category}}</div>
+          <div class="category" style="background: #4ab19d ">UI Kit</div>
+          <div class="category" style="background: #eec857 ">Button</div>
         </div>
         </div>
       <div ng-show="!isAdded(beaker)" class="add-btn" ng-click="addOrRemoveBeaker(beaker)">
